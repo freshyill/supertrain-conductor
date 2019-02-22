@@ -5,7 +5,8 @@
   "scripts": {
     "build": "gulp & npx eleventy",
     "watch": "npx eleventy --watch",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "prod":  "gulp & eleventy"
   },
   "repository": {
     "type": "git",
