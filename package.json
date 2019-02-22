@@ -6,7 +6,7 @@
     "build": "gulp & npx eleventy",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy",
-    "prod": "gulp & eleventy"
+    "prod": "gulp build & eleventy"
   },
   "repository": {
     "type": "git",
