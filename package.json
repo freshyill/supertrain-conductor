@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify.",
   "scripts": {
-    "build": "npx eleventy",
+    "build": "gulp & npx eleventy",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
   },
@@ -12,9 +12,9 @@
     "url": "https://github.com/danurbanowicz/eleventy-netlify-boilerplate"
   },
   "author": {
-    "name": "Dan Urbanowicz",
-    "email": "dan.urbanowicz@gmail.com",
-    "url": "https://www.danurbanowicz.com/"
+    "name": "DUDE",
+    "email": "email@gmail.com",
+    "url": "https://www.yahoo.com/"
   },
   "license": "MIT",
   "bugs": {
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "clean-css": "^4.2.1",
+    "gulp": "^4.0.0",
     "html-minifier": "^3.5.21",
     "uglify-es": "^3.3.9"
   }
