@@ -3,7 +3,7 @@
   "version": "1.0",
   "description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify. Generously forked from https://github.com/danurbanowicz/eleventy-netlify-boilerplate",
   "scripts": {
-    "build": "gulp build; eleventy",
+    "build": "gulp build",
     "watch": "gulp watch & ELEVENTY_ENV=development eleventy --serve",
     "debug": "DEBUG=* npx eleventy"
   },
