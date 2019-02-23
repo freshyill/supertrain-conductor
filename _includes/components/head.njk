@@ -6,14 +6,24 @@
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   {% set css %}
-    {% include "assets/css/inline.css" %}
+    {% include "assets/css/style.css" %}
   {% endset %}
 
-  <style>
-    {{ css | cssmin | safe }}
-  </style>
+  {% if siteTools.env == 'development' %}
+  {# We use a link tag for local development so BrowserSync can reload styles
+     without a full page refresh. #}
+    <link rel="stylesheet" href="/_includes/assets/css/style.css">
+  {% else %}
+  {# Otherwise, we'll just inline them for better performance #}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
+  {% endif %}
 
-  <link rel="stylesheet" href="/_includes/assets/css/style.css">
+  {# This is just here as a placeholder. Inlining local styles will probably be
+     the right approach for any site that uses this. Use this to pull in external styles, such as Google Fonts.
+
+  <link rel="stylesheet" href="/_includes/assets/css/style.css"> #}
 
   {% set js %}
     {% include "assets/js/inline.js" %}

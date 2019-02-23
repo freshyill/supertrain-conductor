@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp'),
       sass = require("gulp-sass");
 
@@ -7,20 +9,22 @@ const gulp = require('gulp'),
 */
 const files = {
   "src": {
-    "styles": './_includes/assets/scss/**/*.scss',
-    "js": './src/js/script.js'
+    "styles": './_includes/assets/scss/*.scss',
+    // Todo: Add scripts here too
+    // "js": './src/js/script.js'
   },
   "dist": {
-    "styles": './_includes/assets/css',
-    "js": 'dist/js'
+    "styles": './_site/_includes/assets/css',
+    // Todo: Add scripts here too
+    // "js": 'dist/js'
   }
 }
 
 
 /*
   STYLES
-  Compile Sass into CSS. This could use some additional steps, but it gets the
-  job done for now. Consider adding PostCSS and what else?
+  Compile Sass into CSS. This is the bare minimum
+  // Todo: Add PostCSS and
 */
 gulp.task('styles', function() {
   return gulp.src(files.src.styles)
@@ -34,12 +38,13 @@ gulp.task('styles', function() {
 
 /*
   WATCH
-  Watch those files, and maybe do some things with them. Eleventy is going to be
+  Watch those files, and then do some things with them. Eleventy is going to be
   watching the content and templates for updates, as well as providing
-  BrowserSync, so no need to set up any of that here.
+  BrowserSync for on-the-fly reloading, so no need to do any of that with Gulp.
 */
 gulp.task("watch", function() {
   gulp.watch(files.src.styles, gulp.parallel('styles'));
+  // Todo: Add scripts here too
 });
 
 
@@ -50,7 +55,7 @@ gulp.task("watch", function() {
 */
 gulp.task('build', gulp.parallel(
   'styles',
-  // 'scripts'
+  // Todo: Add scripts here too
 ));
 
 
