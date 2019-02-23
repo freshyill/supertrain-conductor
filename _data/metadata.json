@@ -1,9 +1,9 @@
 {
-  "title": "Eleventy Netlify Boilerplate",
-  "url": "https://eleventy-netlify-boilerplate.netlify.com",
+  "title": "Supertrain Conductor",
+  "url": "https://github.com/freshyill/supertrain-conductor",
   "author": {
-    "name": "Dan Urbanowicz",
-    "email": "dan.urbanowicz@gmail.com",
-    "github": "https://github.com/danurbanowicz"
+    "name": "Chris Coleman",
+    "email": "freshyill@gmail.com",
+    "github": "https://github.com/freshyill"
   }
 }

@@ -1,6 +1,6 @@
 [build]
   publish = "_site"
-  command = "yarn run prod"
+  command = "yarn run build"
 
 # REDIRECT and HEADERS examples
 

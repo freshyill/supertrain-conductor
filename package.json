@@ -1,27 +1,26 @@
 {
-  "name": "eleventy-netlify-boilerplate",
-  "version": "1.0.1",
-  "description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify.",
+  "name": "supertrain-conductor",
+  "version": "1.0",
+  "description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify. Generously forked from https://github.com/danurbanowicz/eleventy-netlify-boilerplate",
   "scripts": {
-    "build": "gulp & npx eleventy",
-    "watch": "npx eleventy --watch",
-    "debug": "DEBUG=* npx eleventy",
-    "prod": "gulp build & eleventy"
+    "build": "gulp build & eleventy",
+    "watch": "gulp watch & eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danurbanowicz/eleventy-netlify-boilerplate"
+    "url": "https://github.com/freshyill/supertrain-conductor"
   },
   "author": {
-    "name": "DUDE",
-    "email": "email@gmail.com",
-    "url": "https://www.yahoo.com/"
+    "name": "Chris Coleman",
+    "email": "freshyill@gmail.com",
+    "url": "https://illtron.net"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danurbanowicz/eleventy-netlify-boilerplate/issues"
+    "url": "https://github.com/freshyill/supertrain-conductor/issues"
   },
-  "homepage": "https://github.com/danurbanowicz/eleventy-netlify-boilerplate",
+  "homepage": "https://github.com/freshyill/supertrain-conductor",
   "devDependencies": {
     "@11ty/eleventy": "^0.7.1",
     "luxon": "^1.11.0",
@@ -33,7 +32,6 @@
     "gulp": "^4.0.0",
     "gulp-sass": "^4.0.2",
     "html-minifier": "^3.5.21",
-    "require-dir": "^1.2.0",
     "uglify-es": "^3.3.9"
   }
 }

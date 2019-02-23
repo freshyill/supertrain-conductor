@@ -1,3 +1,5 @@
 _site/
 node_modules/
 package-lock.json
+yarn-error.log
+_includes/assets/css/*.*
