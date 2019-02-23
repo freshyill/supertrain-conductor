@@ -14,7 +14,7 @@ const files = {
     // "js": './src/js/script.js'
   },
   "dist": {
-    "styles": './_site/_includes/assets/css',
+    "styles": '_site/_includes/assets/css',
     // Todo: Add scripts here too
     // "js": 'dist/js'
   }
