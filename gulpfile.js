@@ -14,7 +14,7 @@ const files = {
     // "js": './src/js/script.js'
   },
   "dist": {
-    "styles": './_includes/assets/css/',
+    "styles": './_site/_includes/assets/css',
     // Todo: Add scripts here too
     // "js": 'dist/js'
   }
@@ -32,6 +32,7 @@ gulp.task('styles', function() {
       outputStyle: 'compressed'
     })
     .on('error', sass.logError))
+    .pipe(gulp.dest('./_includes/assets/css'))
     .pipe(gulp.dest(files.dist.styles));
 });
 
