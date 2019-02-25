@@ -30,7 +30,11 @@
   "dependencies": {
     "clean-css": "^4.2.1",
     "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.1.7",
+    "gulp-uglifyes": "^0.2.1",
     "html-minifier": "^3.5.21",
     "uglify-es": "^3.3.9"
   }

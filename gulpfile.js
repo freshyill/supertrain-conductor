@@ -1,22 +1,24 @@
-'use strict';
+"use strict";
 
-const gulp = require('gulp'),
-      sass = require("gulp-sass");
+const gulp =       require("gulp"),
+      sass =       require("gulp-sass"),
+      concat =     require("gulp-concat"),
+      sourcemaps = require("gulp-sourcemaps"),
+      terser =     require("gulp-terser");
 
 /*
   FILES //
   Set up some path aliases to make the functions a little easier to look at.
 */
-const files = {
-  "src": {
-    "styles": './_includes/assets/scss/*.scss',
-    // Todo: Add scripts here too
-    // "js": './src/js/script.js'
+const paths = {
+  "styles": {
+    "src":   "./_includes/assets/scss/*.scss",
+    "dist1": "./_site/_includes/assets/css",
+    "dist2": "./_includes/assets/css"
   },
-  "dist": {
-    "styles": './_site/_includes/assets/css',
-    // Todo: Add scripts here too
-    // "js": 'dist/js'
+  "scripts": {
+    "src":  ["./_includes/assets/js/*.js", "!./_includes/assets/js/script.js"],
+    "dist": "./_includes/assets/js"
   }
 }
 
@@ -24,16 +26,28 @@ const files = {
 /*
   STYLES
   Compile Sass into CSS. This is the bare minimum
-  // Todo: Add PostCSS and
+  // Todo: Add PostCSS and other nice stuff
 */
-gulp.task('styles', function() {
-  return gulp.src(files.src.styles)
+gulp.task("styles", function() {
+  return gulp.src(paths.styles.src)
     .pipe(sass({
-      outputStyle: 'compressed'
+      outputStyle: "compressed"
     })
-    .on('error', sass.logError))
-    .pipe(gulp.dest('./_includes/assets/css'))
-    .pipe(gulp.dest(files.dist.styles));
+    .on("error", sass.logError))
+    .pipe(gulp.dest(paths.styles.dist1))
+    .pipe(gulp.dest(paths.styles.dist2));
+});
+
+
+/*
+  SCRIPTS
+  Basic concatenating and uglifying for Javascript. This is the bare minimum
+*/
+gulp.task("scripts", function() {
+  return gulp.src(paths.scripts.src)
+    .pipe(concat("script.js"))
+    .pipe(terser())
+    .pipe(gulp.dest(paths.scripts.dist));
 });
 
 
@@ -44,8 +58,8 @@ gulp.task('styles', function() {
   BrowserSync for on-the-fly reloading, so no need to do any of that with Gulp.
 */
 gulp.task("watch", function() {
-  gulp.watch(files.src.styles, gulp.parallel('styles'));
-  // Todo: Add scripts here too
+  gulp.watch(paths.styles.src, gulp.parallel("styles"));
+  gulp.watch(paths.scripts.src, gulp.parallel("scripts"));
 });
 
 
@@ -54,9 +68,9 @@ gulp.task("watch", function() {
   A parallel process to do a few things at once. Eleventy is also going to be
   building the templates and markdown into pages. Check package.json.
 */
-gulp.task('build', gulp.parallel(
-  'styles',
-  // Todo: Add scripts here too
+gulp.task("build", gulp.parallel(
+  "styles",
+  "scripts"
 ));
 
 
@@ -64,9 +78,9 @@ gulp.task('build', gulp.parallel(
   DEV //
   Build, then watch. package.json will call this.
 */
-gulp.task('dev', gulp.series(
-  'build',
-  'watch'
+gulp.task("dev", gulp.series(
+  "build",
+  "watch"
 ));
 
 
@@ -76,9 +90,10 @@ gulp.task('dev', gulp.series(
   this since package.json is going to be defining all the scripts we need and
   Gulp probably won't be running alone.
 */
-gulp.task('default', defaultTask);
+gulp.task("default", defaultTask);
 
 function defaultTask(done) {
-  gulp.watch(files.src.styles, gulp.parallel('styles'));
+  gulp.watch(paths.styles.src, gulp.parallel("styles"));
+  gulp.watch(paths.scripts.src, gulp.parallel("scripts"));
   done();
 }
