@@ -26,7 +26,9 @@ const paths = {
 /*
   STYLES
   Compile Sass into CSS. This is the bare minimum
-  // Todo: Add PostCSS and other nice stuff
+  // Todo: Add PostCSS, sourcemaps, and a few other basics
+  // Todo: Avoid piping compiled CSS to two destinations
+  //       https://github.com/freshyill/supertrain-conductor/issues/2
 */
 gulp.task("styles", function() {
   return gulp.src(paths.styles.src)

@@ -1,9 +1,9 @@
 {
-  "title": "Supertrain Conductor",
-  "url": "https://github.com/freshyill/supertrain-conductor",
+  "title": "Site Title",
+  "url": "https://some-very-cool-url.com",
   "author": {
-    "name": "Chris Coleman",
-    "email": "freshyill@gmail.com",
-    "github": "https://github.com/freshyill"
+    "name": "Author Name",
+    "email": "user@email.com",
+    "github": "https://github.com/cool-person-on-github"
   }
 }

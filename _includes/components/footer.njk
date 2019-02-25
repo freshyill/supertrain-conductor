@@ -1,6 +1,14 @@
 <footer>
   <small>
-    This project is maintained by <a href="https://www.danurbanowicz.com">Dan Urbanowicz</a>.
-    Check out the <a href="{{ pkg.repository.url }}">Github repo</a>.
+    This project is based on Dan Urbanowicz's <a href="https://github.com/danurbanowicz/eleventy-netlify-boilerplate">Eleventy  Netlify Boilerplate</a>, which builds on the <a href="https://github.com/11ty/eleventy-base-blog">Eleventy Base Blog</a> project. Check them out!
   </small>
+
+
+
+  {% if siteTools.env == 'development' %}
+    <p><small>Environment: development</small></p>
+  {% else %}
+    {# Do nothing #}
+  {% endif %}
+
 </footer>

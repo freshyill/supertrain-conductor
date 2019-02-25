@@ -3,12 +3,6 @@ layout: layouts/base.njk
 section: home
 ---
 
-{% if siteTools.env == 'development' %}
-  <h1>DO THEY SPEAK ENGLISH IN WHAT?</h1>
-{% else %}
-  <h1>WHAT AIN'T NO COUNTRY I EVER HEARD OF.</h1>
-{% endif %}
-
 <p>author: {{ metadata.author.name }}</p>
 <p>env: {{ siteTools.env }}</p>
 
