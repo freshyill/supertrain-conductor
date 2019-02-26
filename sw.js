@@ -10,7 +10,7 @@ self.addEventListener('install', e => {
       return cache.addAll([
         '/',
         "/blog",
-        "/about"
+        "/about",
         "/contact"
         /*
           DEAR READER,
