@@ -19,4 +19,4 @@ The Markdown files can even include data, such as the author name, which is {{ p
 
 Click the button below to deploy your own copy of this project to Netlify.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/freshyill/supertrain-conductor&stack=cms)
+[![Deploy to Netlify](//www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/freshyill/supertrain-conductor&stack=cms)
