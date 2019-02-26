@@ -9,6 +9,8 @@ self.addEventListener('install', e => {
     caches.open(cacheName).then(cache => {
       return cache.addAll([
         '/',
+        "/blog/index.html",
+        "/blog/",
         "/blog",
         "/about",
         "/contact"
