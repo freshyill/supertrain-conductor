@@ -1,0 +1,13 @@
+{
+  "short_name": "Supertrain",
+  "name": "Supertrain Conductor",
+  "icons": [{
+    "src": "icons/icon.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "display": "minimal-ui"
+}

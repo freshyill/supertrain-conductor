@@ -1,6 +1,7 @@
 {
   "title": "Site Title",
   "url": "https://some-very-cool-url.com",
+  "description": "This is the meta description",
   "author": {
     "name": "Author Name",
     "email": "user@email.com",
