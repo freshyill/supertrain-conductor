@@ -1,9 +1,13 @@
 //  This is just a demo for showing Sass imports work
 
 * {
-  color: blue;
+  color: black;
+}
+
+a {
+  color: darkcyan;
 }
 
 body {
-  background: lightgray;
+  background: white;
 }
