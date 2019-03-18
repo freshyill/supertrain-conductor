@@ -58,7 +58,7 @@ Clicking the button above will deploy a copy of the demo website to your Netlify
 * Manage content with Netlify CMS
 * Process form data with Netlify Forms
 
-### Setup authentication
+### Set up authentication
 
 After deploying this project, Netlify Identity will add you as a CMS user and will email you an invite. It is not necessary to accept this invite if you wish to use an [OAuth provider](https://www.netlify.com/docs/identity/#external-provider-login) (e.g. Github) to manage authentication for your CMS. It is recommended to use this method of authentication as it removes the need for an email & password to log in to the CMS and is generally more secure. You will need to add an OAuth provider in your Netlify app settings under `"Settings" > "Identity" > "External providers"`.
 
