@@ -22,18 +22,19 @@
   },
   "homepage": "https://github.com/freshyill/supertrain-conductor",
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1",
-    "luxon": "^1.11.0",
-    "markdown-it": "^8.4.1",
-    "markdown-it-anchor": "^4.0.0"
+    "@11ty/eleventy": "^0.8.3",
+    "luxon": "^1.17.2",
+    "markdown-it": "^9.0.1",
+    "markdown-it-anchor": "^5.2.4"
   },
   "dependencies": {
     "clean-css": "^4.2.1",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
+    "gulp-minifier": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.1.7",
+    "gulp-terser": "^1.2.0",
     "gulp-uglifyes": "^0.2.1",
     "html-minifier": "^3.5.21",
     "uglify-es": "^3.3.9"
